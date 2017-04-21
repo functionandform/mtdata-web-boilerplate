@@ -1,10 +1,8 @@
 # mtdata-web-boilerplate
-web UI boiler plate
+web UI boilerplate for all of MTData's web app products.
 
-This is a UI kit for all of MTData's web app projects.
-
-Before development:
-The UI kit uses SCSS so please do not edit or change css files. Only edit files in the SASS folders.
-Prepros is used to compile sass and javascript files. Json files are included with compile configs.
-Ajax is used for tab loading and pulling SVG icons so previewing development will only work from a server environment.
-
+Please note before making changes:
+The UI kit is build using SCSS. So changes made to css must be made in the SASS files and compiled.
+Both SCSS and Javascript are both compiled using prepros.io. Prepros config files are included.
+Please ensure designs are still followed when using this kit. This will prevent componants being mis-used.
+Navigation structures need to be discussed with designer first. Over-arching sidebar nav should never have more than 5 sections. Within each section, tabs can be used for further navigation.
