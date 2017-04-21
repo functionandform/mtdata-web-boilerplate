@@ -1,0 +1,17 @@
+/* Layout */
+$max-width: 1240px; // max-width
+$multiple:24px;
+
+$border-radius:5px;
+
+
+$breakpoints: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1024px,
+  large: 1366px
+);
+
+
+/* transition beziers */
+$elastic: cubic-bezier(0.64, 0.57, 0.67, 1.53);

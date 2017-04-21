@@ -1,0 +1,124 @@
+.overlay {
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	padding:$multiple;
+	z-index:40;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	visibility:hidden;
+	opacity:0;
+	transition:opacity 400ms ease-in-out 0s, visibility 0s linear 400ms;
+	transform-style: preserve-3d;
+	perspective: 4000;
+	.window {
+		transform-style: preserve-3d;
+		perspective: 4000;
+		max-width:700px;
+		margin:0 auto;
+		transform-origin:center 50%;
+		animation:overlayWindowOut 400ms ease-out 0ms;
+		&.small {
+			max-width:320px;
+		}
+		&.medium {
+			max-width:700px;
+		}
+		&.large {
+			max-width:960px;
+		}
+	}
+	.close {
+		position:fixed;
+		top:$multiple;
+		right:$multiple;
+		display:none;
+		cursor:pointer;
+		.icon {
+			width:48px;
+			height:48px;
+			transition:250ms ease-in-out 250ms;
+			opacity:0;
+			transform:scale(0) rotate(180deg);
+		}
+	}
+	&.open {
+		opacity:1;
+		transition:opacity 400ms ease-in-out 0s, visibility 0ms linear 0ms;
+		visibility: visible;
+		transform-origin:center 0%;
+		.window {
+			animation:overlayWindowIn 400ms ease-out 0ms;
+		}
+		.close {
+			.icon {
+				transition:250ms ease-in-out 400ms;
+				opacity:1;
+				transform:scale(1) rotate(0deg);
+				&:hover {
+					transition:150ms ease-in-out;
+					transform:scale(1.2) rotate(0deg);
+				}
+			}
+		}
+	}
+	&.modal {
+		.close {
+			display:block;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			width:100%;
+			height:100%;
+			.icon {
+				display:none;
+			}
+		}
+	}
+	&.fill {
+		.close {
+			display:block;
+			z-index: 20;
+		}
+	}
+	.scrollable {
+		width:calc(100% + 48px);
+		margin:(-$multiple);
+		padding:48px $multiple;
+		overflow-y:scroll;
+		overflow-x:hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+body.overlay-open {
+    overflow: hidden;
+}
+
+
+@keyframes overlayWindowIn {
+  0% {
+  	opacity:0;
+	transform:translateY(-48px) rotateX(45deg);
+  }
+  100% {
+  	opacity:1;
+  	transform:translateY(0) rotateX(0);
+  }
+}
+
+@keyframes overlayWindowOut {
+  0% {
+  	opacity:1;
+	transform:translateY(0) rotateX(0);
+  }
+  100% {
+  	opacity:0;
+  	transform:translateY(48px) rotateX(-45deg);
+  }
+}

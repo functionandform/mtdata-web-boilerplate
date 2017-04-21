@@ -1,0 +1,117 @@
+<div class="tools padding">
+	<div class="toolGroup">
+		<div tabindex="0" class="function expandableTool">
+			<div class="toggle"></div>
+			<svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-filter"></use></svg>
+			<span class="placeholder">Groups</span>
+			<svg class="icon chev-down"><use xlink:href="iconography/symbol-defs.svg#icon-chev-down"></use></svg>
+			<div class="toolSelect leftAlign">
+				<ul>
+					<li>
+						<h4>Filter by group</h4>
+						<div class="inputWrap withType">
+							<input type="text" placeholder="Search">
+							<svg class="icon search"><use xlink:href="iconography/symbol-defs.svg#icon-search"></use></svg>
+						</div><!-- inputWrap -->
+					</li>
+					<li class="lineBreak"></li>
+					<li>Group 1</li>
+					<li>Group 2</li>
+					<li>Group 3</li>
+					<li>Group 4</li>
+				</ul>
+			</div><!-- toolSelect -->
+		</div><!-- function -->
+	</div><!-- toolGroup -->
+	<div class="toolGroup">
+		<div tabindex="0" class="function expandableTool dateTimeRange">
+			<div class="toggle"></div>
+			<svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-calander"></use></svg>
+			<span class="start-date-result">DD/MM/YYYY</span><span class="start-time-result">--:--</span>
+			<div class="toolSelect rightAlign">
+				<ul>
+					<li>
+						<h4>Set date and time</h4>
+						<div class="inputWrap withType">
+							<input type="date" id="start-time" data-toggle="datepicker">
+							<svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-calander"></use></svg>
+						</div><!-- inputWrap -->
+						<div class="inputWrap withType">
+							<input type="time" id="start-date" data-toggle="datepicker">
+							<svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-calander"></use></svg>
+						</div><!-- inputWrap -->
+					</li>
+				</ul>
+			</div><!-- toolSelect -->
+		</div><!-- function -->
+	</div><!-- toolGroup -->
+</div><!-- tools-->
+<div class="fullPanel noPadding">
+	<div id="interactiveMap">
+		<div class="wrapper">
+			<div class="plotList">
+				<div class="titleBar">
+					<div class="title">
+						Units
+					</div><!-- title -->
+					<div class="inputWrap withType">
+						<input type="text" placeholder="Search">
+						<svg class="icon search"><use xlink:href="iconography/symbol-defs.svg#icon-search"></use></svg>
+					</div><!-- inputWrap -->
+				</div><!-- titleBar -->
+				<ul>
+					<li>
+						<p><strong>Unit name</strong></p>
+						<p class="footnote">Unit details lorem ipsum dolar sit amet consectetur</p>
+						<svg class="icon driving"><use xlink:href="iconography/symbol-defs.svg#icon-driving"></use></svg>
+					</li>
+					<li>
+						<p><strong>Unit name</strong></p>
+						<p class="footnote">Unit details lorem ipsum dolar sit amet consectetur</p>
+						<svg class="icon driving"><use xlink:href="iconography/symbol-defs.svg#icon-driving"></use></svg>
+					</li>
+					<li>
+						<p><strong>Unit name</strong></p>
+						<p class="footnote">Unit details lorem ipsum dolar sit amet consectetur</p>
+						<svg class="icon sleep"><use xlink:href="iconography/symbol-defs.svg#icon-sleep"></use></svg>
+					</li>
+					<li>
+						<p><strong>Unit name</strong></p>
+						<p class="footnote">Unit details lorem ipsum dolar sit amet consectetur</p>
+						<svg class="icon break"><use xlink:href="iconography/symbol-defs.svg#icon-break"></use></svg>
+					</li>
+					<li>
+						<p><strong>Unit name</strong></p>
+						<p class="footnote">Unit details lorem ipsum dolar sit amet consectetur</p>
+						<svg class="icon stockyard"><use xlink:href="iconography/symbol-defs.svg#icon-stockyard"></use></svg>
+					</li>
+					<li>
+						<p><strong>Unit name</strong></p>
+						<p class="footnote">Unit details lorem ipsum dolar sit amet consectetur</p>
+						<svg class="icon not-driving"><use xlink:href="iconography/symbol-defs.svg#icon-not-driving"></use></svg>
+					</li>
+				</ul>
+			</div><!-- list -->
+			<div class="map">
+				<div class="fakeMap"></div>
+			</div><!-- map -->
+		</div><!-- wrapper -->
+		<div class="switcheroo"></div>
+	</div><!-- interactiveMap -->
+</div><!-- fullPanel -->
+
+<script>
+
+	// Map switch
+
+	$("#interactiveMap .switcheroo").click(function() {
+		$("#interactiveMap").toggleClass("switch");
+	});
+
+
+
+	$(".expandableTool:not(.simple) .toggle").click(function() {
+    $(this).parent().toggleClass('open');
+  });
+
+</script>

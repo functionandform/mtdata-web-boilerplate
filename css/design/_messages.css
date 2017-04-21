@@ -1,0 +1,19 @@
+.messages {
+  display: block;
+  overflow: hidden;
+}
+
+.messages .wrap {
+  width: 200%;
+  display: block;
+}
+
+.messages .wrap .list {
+  width: 100%;
+  float: left;
+}
+
+.messages .wrap .feed {
+  width: 100%;
+  float: left;
+}

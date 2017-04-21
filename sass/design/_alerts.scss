@@ -1,0 +1,100 @@
+.alert {
+	bottom:$multiple * 2;
+	border-radius:$border-radius;
+	left:0;
+	margin:$multiple ($multiple * 3) $multiple ($multiple / 2);
+	position:fixed;
+	max-width:calc(100% - 96px);
+	font-size:12px;
+	line-height:16px;
+	min-height:$multiple * 2;
+	padding:6px ($multiple * 2);
+	font-weight:400;
+	font-style:italic;
+	text-align:left;
+	z-index:20;
+	vertical-align:middle;
+	transition:opacity 200ms ease-in-out, transform 200ms ease-in-out, visibility 0ms ease-in-out 200ms;
+	opacity:0;
+	transform:scale(0);
+	transform-origin:5% 50%;
+	display:table;
+	span {
+		display:table-cell;
+		vertical-align: middle;
+	}
+	&.visible {
+		transition:opacity 200ms ease-in-out, transform 200ms $elastic, visibility 0ms ease-in-out 0ms;
+		visibility: visible;
+		opacity:1;
+		transform:scale(1);
+	}
+	.icon {
+		margin:0;
+		position:absolute;
+		left:12px;
+		top:50%;
+		transform:translateY(-50%);
+	}
+	.close {
+		right:$multiple / 2;
+		left:auto;
+		cursor:pointer;
+	}
+	@include breakpoint(tablet) {
+		bottom:auto;
+		top:$multiple * 1.5;
+		right:0;
+		left:auto;
+		margin:$multiple ($multiple / 2);
+		transform-origin:95% 50%;
+	}
+}
+
+.announce {
+	overflow:hidden;
+	max-height:0;
+	opacity:0;
+	visibility:hidden;
+	position:relative;
+	transition:opacity 200ms ease-in-out, max-height 200ms ease-in-out, visibility 0ms ease-in-out 200ms;
+	.area {
+		border-radius:$border-radius;
+		position:relative;
+		display:table;
+		font-size:14px;
+		line-height:$multiple;
+		padding:($multiple / 2) ($multiple * 2);
+		margin:0 $multiple 0 $multiple;
+		font-weight:400;
+		font-style:italic;
+		text-align:left;
+		vertical-align:middle;
+		span {
+			display:table-cell;
+			vertical-align: middle;
+		}
+		.icon {
+			margin:0;
+			position:absolute;
+			left:12px;
+			top:50%;
+			transform:translateY(-50%);
+		}
+		.close {
+			right:$multiple / 2;
+			left:auto;
+			cursor:pointer;
+		}
+		@include breakpoint(tablet) {
+			margin:0 ($multiple * 4) 0 $multiple;
+		}
+	}
+	&.visible {
+		transition:opacity 200ms ease-in-out, max-height 200ms $elastic, visibility 0ms ease-in-out 0ms;
+		visibility: visible;
+		max-height:400px;
+		opacity:1;
+	}
+}
+

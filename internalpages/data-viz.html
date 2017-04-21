@@ -1,0 +1,94 @@
+<div class="tools padding">
+  <div class="toolGroup">
+    <div tabindex="0" class="function expandableTool">
+      <div class="toggle"></div>
+      <svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-filter"></use></svg>
+      <span class="placeholder">Groups</span>
+      <svg class="icon chev-down"><use xlink:href="iconography/symbol-defs.svg#icon-chev-down"></use></svg>
+      <div class="toolSelect leftAlign">
+        <ul>
+          <li>
+            <h4>Filter by group</h4>
+            <div class="inputWrap withType">
+              <input type="text" placeholder="Search">
+              <svg class="icon search"><use xlink:href="iconography/symbol-defs.svg#icon-search"></use></svg>
+            </div><!-- inputWrap -->
+          </li>
+          <li class="lineBreak"></li>
+          <li>Group 1</li>
+          <li>Group 2</li>
+          <li>Group 3</li>
+          <li>Group 4</li>
+        </ul>
+      </div><!-- toolSelect -->
+    </div><!-- function -->
+  </div><!-- toolGroup -->
+  <div class="toolGroup">
+    <div tabindex="0" class="function expandableTool dateTimeRange">
+      <div class="toggle"></div>
+      <svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-calander"></use></svg>
+      <span class="start-date-result">DD/MM/YYYY</span><span class="start-time-result">--:--</span>
+      <div class="toolSelect rightAlign">
+        <ul>
+          <li>
+            <h4>Set date and time</h4>
+            <div class="inputWrap withType">
+              <input type="date" id="start-time" data-toggle="datepicker">
+              <svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-calander"></use></svg>
+            </div><!-- inputWrap -->
+            <div class="inputWrap withType">
+              <input type="time" id="start-date" data-toggle="datepicker">
+              <svg class="icon"><use xlink:href="iconography/symbol-defs.svg#icon-calander"></use></svg>
+            </div><!-- inputWrap -->
+          </li>
+        </ul>
+      </div><!-- toolSelect -->
+    </div><!-- function -->
+  </div><!-- toolGroup -->
+</div><!-- tools-->
+<div class="fullPanel">
+	<h2>Charts and data visualization</h2>
+	<div class="container">
+		<div class="col four">
+			<div class="ct-chart ct-perfect-fourth" id="chartDemo1"></div>
+		</div><!-- col four -->
+		<div class="col four">
+			<div class="ct-chart ct-perfect-fourth" id="chartDemo2"></div>
+		</div><!-- col four -->
+		<div class="col four">
+      <div class="ct-donut-wrapper">
+			 <div id="donut1" data-value="87" class="ct-chart ct-square ct-gauge"></div>
+      </div><!-- ct-donut-wrapper -->
+		</div><!-- col four -->
+	</div><!-- container -->
+	<div class="container">
+		<div class="col four">
+			<div class="ct-chart ct-perfect-fourth" id="chartDemo4"></div>
+		</div><!-- col four -->
+		<div class="col four">
+			<div class="ct-chart ct-perfect-fourth" id="chartDemo5"></div>
+		</div><!-- col four -->
+		<div class="col four">
+			<div class="ct-chart ct-perfect-fourth" id="chartDemo6"></div>
+		</div><!-- col four -->
+	</div><!-- container -->
+</div><!-- fullPanel -->
+
+<script>
+
+
+
+  drawCharts();
+  donuts.init();
+
+// date/time picker
+  $('input[type="date"]').datepicker();
+  $('input[type="time"]').timepicker();
+
+
+  $(".expandableTool:not(.simple) .toggle").click(function() {
+    $(this).parent().toggleClass('open');
+  });
+
+
+</script>

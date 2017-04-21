@@ -1,0 +1,777 @@
+/* Colors - Light UI */
+$c-primary: #4C7BC1;
+
+$c-bg: #DFE3EE;
+$c-secondary-panel: #F6F6F9;
+$c-primary-panel:#FFFFFF;
+$c-highlight-panel:#EBEDF1;
+$c-main-text:#424242;
+
+$grey:#828282;
+
+$green:#7ED321;
+$yellow:#F8E71C;
+$orange:#D66E12;
+$red:#D0021B;
+$purple:#9012FE;
+
+.icon {
+	color:$c-primary;
+}
+
+:focus {
+	outline: 2px solid rgba(76,123,193,0.5);
+}
+
+body {
+	background-color:$c-bg;
+}
+
+#navBar {
+	background-color:$c-primary-panel;
+	
+}
+
+
+
+.nav li, .nav #logo {
+	color:$grey;
+	border-bottom-color:$c-bg;
+}
+
+.nav li:before {
+	background-color:$c-primary;
+}
+
+#breadCrumb li {
+	color:$grey;
+	&:last-of-type {
+		color:$c-main-text;
+	}
+}
+
+#toolBar, #headerExpansion {
+	background-color:$c-highlight-panel;
+}
+
+#indicator {
+	background-color:$c-primary;
+}
+
+#headerExpansion:after {
+	background: linear-gradient(to right, rgba(235,237,241,0) 0%, rgba(235,237,241,1) 100%);
+}
+
+#pageTabs a {
+	li {
+		color:$grey;
+	}
+	&.active {
+		li {
+			color:$c-main-text;
+		}
+	}
+}
+
+p {
+	color:$c-main-text;
+	&.footnote {
+		color:$grey;
+	}
+}
+
+h1, h2, h3 {
+	color:$c-main-text;
+}
+
+h2 .icon, h1 .icon {
+	color:$grey;
+}
+
+h4 {
+	color:$grey;
+}
+
+header, #headerExpansion {
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+
+#headerExpansion {
+	border-top:1px solid $c-bg;
+}
+
+
+
+#floatingAction {
+	.action {
+		background-color:#FFFFFF;
+		box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+		.icon {
+			color:$c-primary;
+		}
+		&.primary {
+			background-color:$c-primary;
+			.icon {
+				color:#FFFFFF;
+			}
+		}
+	}
+	.extraOptions:before {
+		background-color:rgba(0,0,0,0.4);
+	}
+}
+
+.panel, .fullPanel {
+	background-color:$c-primary-panel;
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+	.titleBar {
+		background-color:$c-highlight-panel;
+		.title {
+			color:$c-main-text;
+		}
+	}
+}
+
+.lineBreak {
+	background-color:$c-bg;
+}
+
+#login .dialogue .panel {
+	box-shadow: 0px 1px 72px 0px rgba(0,0,0,0.6);
+}
+
+.panel .titleBar .icon {
+	color:$grey;
+}
+
+.theme.preview {
+	background-color:#262729;
+}
+
+.theme {
+	border:2px solid $c-primary;
+	&#dark {
+		background-color:#262729;
+	}
+	&#light {
+		background-color:#DFE3EE;
+	}
+}
+
+.circliful .outer {
+    fill: transparent;
+    stroke:$c-bg;
+}
+
+.stat {
+	.data {
+		color:$c-main-text;
+		&.currency:before {
+			color:$grey;
+		}
+	}
+	label {
+		color: $grey;
+	}
+}
+
+.expandableTool .toolSelect {
+	background-color:$c-primary-panel;
+	box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1);
+	li {
+		color:$c-main-text;
+	}
+}
+
+.expandableTool.notify .tool:after {
+	background-color:$orange;
+	border-color:$c-highlight-panel;
+}
+
+.listedContent li {
+		border-bottom:1px solid $c-bg;
+}
+
+.inputWrap.withHint .icon {
+	color:$grey;
+	opacity:0.5;
+}
+.inputWrap.withType .icon {
+	color:$c-primary;
+}
+
+#notifications ul li.unread .icon {
+	color:$orange;
+}
+
+
+label {
+	color:$grey;
+}
+input, .select {
+	border:1px solid rgba(76,123,193,0.4);
+	color:$c-main-text;
+	&:invalid {
+		border:2px solid $orange;
+	}
+}
+input[type=text], input[type=search], input[type=password], input[type=time], input[type=date] {
+	background-color:rgba(1,34,82,0.07);
+	box-shadow:inset 0px 2px 2px 0px rgba(0,0,0,0.1);
+}
+.inputWrap .validation {
+	color:$orange;
+	.icon {
+		color:$orange;
+		opacity:1;
+	}
+}
+.select {
+	background-color:rgba(255,255,255,0.2);
+	box-shadow:inset 0px -2px 2px 0px rgba(0,0,0,0.1);
+	select {
+		color:$c-main-text;
+	}
+}
+
+
+
+
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="checkbox"]:checked + label:before,
+.radioWrap input[type="radio"]:not(:checked) + label:before,
+.radioWrap input[type="radio"]:checked + label:before  {
+	border:1px solid rgba(76,123,193,0.4);
+	background-color:rgba(255,255,255,0.2);
+	box-shadow:inset 0px -1px 2px 0px rgba(0,0,0,0.1);
+}
+
+
+/* checked mark aspect */
+.radioWrap input[type="radio"]:not(:checked) + label:after,
+.radioWrap input[type="radio"]:checked + label:after {
+	background-color:$c-primary;
+}
+
+
+.cta {
+	border:1px solid rgba(76,123,193,0.4);
+	box-shadow:inset 0px -4px 0px 0px rgba(0,0,0,0.2);
+	&.secondary {
+		box-shadow:inset 0px -4px 0px 0px rgba(76,123,193,0.2);
+		background-color:rgba(255,255,255,0.2);
+		color:$c-main-text;
+		span .icon {
+			color:$c-primary;
+		}
+	}
+	&.primary {
+		span .icon {
+			color:#FFFFFF;
+		}
+		background-color:$c-primary;
+		color:#FFFFFF;
+	}
+	&.inactive {
+		span .icon {
+			color:$grey;
+		}
+		background:transparent !important;
+		color:$grey !important;
+		box-shadow:none !important;
+	}
+	&:not(.inactive):hover {
+
+	}
+	&:not(.inactive):active {
+		box-shadow:inset 0px 3px 0px 0px rgba(0,0,0,0.2);
+		&.secondary {
+			box-shadow:inset 0px 3px 0px 0px rgba(76,123,193,0.2);
+		}
+	}
+}
+.cta.progress.complete {
+	background-color:$green !important;
+}
+
+.cta.progress.error {
+	background-color:$red !important;
+}
+
+
+.multipleChoice {
+	label {
+		border-top:1px solid rgba(76,123,193,0.4);
+		border-bottom:1px solid rgba(76,123,193,0.4);
+		border-left:1px solid rgba(76,123,193,0.4);
+		box-shadow:inset 0px -4px 0px 0px rgba(76,123,193,0.2);
+		background-color:rgba(255,255,255,0.2);
+		color:$c-main-text;
+		&:last-of-type {
+			border-right:1px solid rgba(76,123,193,0.4);
+		}
+	}
+	input[type="radio"]:checked + label {
+		background-color:$c-primary;
+		color:#FFFFFF;
+		box-shadow:inset 0px -4px 0px 0px rgba(0,0,0,0.2);
+	}
+	input[type="radio"]:not(:checked) + label:active {
+		box-shadow:inset 0px 3px 0px 0px rgba(76,123,193,0.2);
+	}
+}
+
+.tableWrapper:after {
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+table {
+	thead {
+		background-color:$c-highlight-panel;
+		color:$grey;
+		tr {
+		}
+	}
+	tbody {
+		tr {
+			td {
+				border-right:1px solid $c-highlight-panel;
+				color:$c-main-text;
+			}
+			background-color:$c-primary-panel;
+			&:nth-of-type(even) {
+				background-color:#F9FAFC;
+			}
+		}
+	}
+}
+
+.function {
+	.icon.chev-down {
+		color:$grey;
+	}
+	span {
+		color:$c-main-text;
+	}
+	span.placeholder {
+		color:$grey;
+	}
+}
+
+
+.starRating {
+    .empty {
+        .icon {
+        	color:$c-bg;
+        }
+    }
+    .full {
+        .icon {
+        	color:$yellow;
+        }
+    }
+}
+
+
+
+
+.messageList {
+	border-right:1px solid $c-bg;
+	background-color:$c-primary-panel;
+	.titleBar {
+		background-color: $c-highlight-panel;
+		.title {
+			color:$c-main-text;
+		}
+	}
+	ul {
+		li {
+			border-bottom:1px solid $c-bg;
+			&:hover {
+				background-color:$c-secondary-panel;
+			}
+			&.active:before {
+				background-color:$c-primary;
+			}
+			.icon {
+				&.un-opened {
+					color:$orange;
+				}
+				&.opened {
+					display:none;
+					color:$grey;
+				}
+			}
+		}
+	}
+}
+.chat {
+	background-color: $c-secondary-panel;
+	.to {
+		background-color:$c-secondary-panel;
+		border-bottom:1px solid $c-bg;
+		span {
+			color:$c-main-text;
+		}
+	}
+	.feed {
+		.bubble {
+			background-color:$c-primary-panel;
+			color:$c-main-text;
+			&.me {
+				background-color:$c-primary;
+				color:#FFFFFF;
+			}
+		}
+	}
+}
+
+.chat:after {
+	background: linear-gradient(to bottom, rgba(235,237,241,1) 0%, rgba(235,237,241,0) 100%);
+}
+
+#chatPopups {
+	.chatBox {
+		.bar {
+			background-color: $c-highlight-panel;
+			.recipiants {
+				color:$c-main-text;
+				.alert {
+					background-color:$orange;
+				}
+			}
+		}
+	}
+}
+.ct-chart.pie.withLegend {
+	margin-right:100px;
+}
+.ct-chart-pie {
+	.ct-slice-pie {
+		//stroke:$c-bg;
+		//stroke-width:0px;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+	}
+	.ct-series {
+		//stroke-width:0px;
+		font-weight:600;
+	}
+
+	.ct-label {
+		fill:#FFFFFF;
+		color:#FFFFFF;
+		font-weight:900;
+	}
+}
+
+.ct-gauge .ct-label {
+	fill:$c-main-text;
+}
+
+
+
+.ct-label--post {
+  fill:$grey;
+}
+
+
+.ct-legend li {
+	color:$grey;
+}
+
+.ct-gauge {
+	circle {
+		stroke:$c-bg;
+	}
+}
+
+
+.overlay {
+	&.modal {
+		background: rgba(0,0,0,0.6);
+	}
+	&.fill {
+		background-color:$c-primary-panel;
+		.close {
+			.icon {
+				color:$c-primary;
+			}
+		}
+	}
+}
+
+// switches 
+
+
+.switchery {
+	//background-color:$c-primary-panel !important;
+	border: 1px solid rgba(76,123,193,0.4) !important;
+	& > small {
+		background:$c-primary !important;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	}
+}
+
+
+ul.links li {
+	color:$grey;
+}
+
+
+.codeSnippet {
+	color:$grey;
+}
+
+
+
+// map
+
+#interactiveMap .wrapper .map {
+	background-color:$c-primary-panel;
+	border-left:1px solid $c-bg;
+}
+
+
+#interactiveMap .wrapper .plotList {
+	border-right:1px solid $c-bg;
+	background-color:$c-primary-panel;
+	.titleBar {
+		background-color: $c-highlight-panel;
+		.title {
+			color:$c-main-text;
+		}
+	}
+	ul {
+		li {
+			border-bottom:1px solid $c-bg;
+			&:hover {
+				background-color:$c-secondary-panel;
+			}
+			&.active:before {
+				background-color:$c-primary;
+			}
+			.icon {
+				&.sleep {
+					color:$purple;
+				}
+				&.stockyard {
+					color:$green;
+				}
+				&.driving {
+					color:$yellow;
+				}
+				&.not-driving {
+					color:$green;
+				}
+				&.break {
+					color:$green;
+				}
+			}
+		}
+	}
+}
+
+
+.ui-timepicker-wrapper {
+	background-color:$c-primary-panel;
+	box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+.ui-timepicker-list:hover .ui-timepicker-duration {
+	color: $c-main-text;
+}
+
+.ui-timepicker-list li, li.ui-timepicker-selected .ui-timepicker-duration,
+.ui-timepicker-list li:hover .ui-timepicker-duration {
+	color:$c-main-text;
+}
+
+li.ui-timepicker-selected,
+.ui-timepicker-list li:hover,
+.ui-timepicker-list .ui-timepicker-selected:hover {
+	background-color:$c-primary;
+	color:#FFFFFF;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled,
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+	color: $c-main-text;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+	background-color: $c-secondary-panel;
+}
+
+
+
+.datepicker-container {
+	background-color:$c-primary-panel;
+	color:$c-main-text;
+}
+
+
+
+.datepicker-dropdown {
+	box-shadow:0 3px 6px rgba(0,0,0,0.2);
+	border: 1px solid $c-bg;
+}
+
+.datepicker-top-left,
+.datepicker-top-right {
+  border-top-color: $c-primary;
+}
+
+.datepicker-top-left:before,
+.datepicker-top-right:before {
+  border-bottom-color: $c-primary;
+}
+
+.datepicker-top-left:after,
+.datepicker-top-right:after {
+  border-bottom-color: $c-primary;
+}
+
+.datepicker-bottom-left,
+.datepicker-bottom-right {
+  border-bottom-color: $c-primary;
+}
+
+
+.datepicker-bottom-left:before,
+.datepicker-bottom-right:before {
+  border-top-color: $c-primary;
+}
+
+
+.datepicker-bottom-left:after,
+.datepicker-bottom-right:after {
+  bottom: -4px;
+  border-top-color: $c-primary;
+}
+
+
+.datepicker-panel > ul > li {
+
+  background-color: $c-primary-panel;
+}
+
+.datepicker-panel > ul > li:hover {
+  background-color:$c-primary;
+}
+
+.datepicker-panel > ul > li.muted,
+.datepicker-panel > ul > li.muted:hover {
+  color: $grey;
+}
+
+.datepicker-panel > ul > li.highlighted {
+  background-color: $green;
+}
+
+.datepicker-panel > ul > li.highlighted:hover {
+  background-color: $c-primary;
+}
+
+.datepicker-panel > ul > li.picked,
+.datepicker-panel > ul > li.picked:hover {
+  color: #FFFFFF;
+  background-color:$c-primary;
+}
+
+.datepicker-panel > ul > li.disabled,
+.datepicker-panel > ul > li.disabled:hover {
+  color: $grey;
+  background-color: $c-primary-panel;
+}
+
+.datepicker-panel > ul > li.disabled.highlighted,
+.datepicker-panel > ul > li.disabled:hover.highlighted {
+  background-color: $c-primary;
+}
+
+.datepicker-panel > ul[data-view='week'] > li,
+.datepicker-panel > ul[data-view='week'] > li:hover {
+
+  background-color: $c-primary-panel;
+}
+
+
+
+ul.articles li {
+	.icon {
+		color:$grey;
+	}
+}
+
+ul.articles a:not(:last-of-type) li {
+	border-bottom:1px solid $c-bg;
+}
+
+
+ul.accordian li {
+	&:not(:last-of-type) {
+		border-bottom:1px solid $c-bg;
+	}
+	.question:before, .answer:before {
+		color:$grey;
+	}
+	.icon {
+		color:$grey;
+	}
+
+}
+
+.alert {
+	background-color:$orange;
+	color:#FFFFFF;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+	.icon {
+		color:#FFFFFF;
+	}
+	&.positive {
+		background-color:$green;
+	}
+}
+
+.announce {
+	.area {
+		min-width:75%;
+		background-color:$c-primary-panel;
+		color:$c-main-text;
+		border:1px solid rgba(76,123,193,0.4);
+		.icon:not(.close) {
+			color:$orange;
+		}
+	}
+	&.positive .area {
+		.icon:not(.close) {
+			color:$green;
+		}
+	}
+}
+
+
+
+// color overides
+
+
+.red {
+	color:$red !important;
+}
+.orange {
+	color:$orange !important;
+}
+.yellow {
+	color:$yellow !important;
+}
+.green {
+	color:$green !important;
+}
+.blue {
+	color:$c-primary !important;
+}

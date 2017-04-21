@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/**
+ * Style file
+ *
+ * This file is compiled into style.css
+ */
+
+ /* ---------- fonts -------------------*/
+
+/* ---------- Import css reset ---------- */
+
+@import 'base/reset';
+
+
+/* ---------- Import variables ---------- */
+
+@import 'base/variables';
+
+
+/* ---------- Import base ---------- */
+
+@import 'base/mixins';
+
+/* ---------- Import design ---------- */
+@import 'design/login';
+@import 'design/typography';
+@import 'design/layout';
+@import 'design/nav';
+@import 'design/header';
+@import 'design/global';
+@import 'design/design';
+@import 'design/tools';
+@import 'design/charts';
+@import 'design/slick';
+@import 'design/dashboard';
+@import 'design/forms';
+@import 'design/actions';
+@import 'design/tables';
+@import 'design/messages';
+@import 'design/overlay-modules';
+@import 'design/map-interface.scss';
+@import 'design/articles.scss';
+@import 'design/alerts.scss';

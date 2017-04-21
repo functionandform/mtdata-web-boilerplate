@@ -1,0 +1,63 @@
+.tableWrapper {
+	margin:0 (-$multiple);
+	position:relative;
+	overflow-x:hidden;
+	&:after {
+		width:$multiple * 2;
+		height:100%;
+		position:absolute;
+		top:0;
+		right:0;
+		display:block;
+		content:"";
+		pointer-events:none;
+		z-index: 2;
+		@include breakpoint(tablet) {
+			display:none;
+		}
+	}
+	.overflow {
+		overflow-x:scroll;
+		position:relative;
+		display:block;
+		@include breakpoint(tablet) {
+			overflow-x:hidden;
+			width:100%;
+		}
+	}
+}
+
+table {
+	min-width:100%;
+	margin:0;
+	line-height:$multiple * 2;
+	white-space: nowrap;
+	table-layout: fixed;
+	text-align:left;
+	@include breakpoint(tablet) {
+		width:100%;
+
+	}
+	thead {
+		th {
+			height:$multiple * 2;
+			padding:0 $multiple;
+			white-space : nowrap;
+	  		overflow : hidden;
+			text-overflow: ellipsis;
+			font-weight:600;
+			text-transform:uppercase;
+		}
+	}
+	tr {
+		//min-width:90px;
+		td {
+			height:$multiple * 2;
+			font-size:14px;
+			white-space : nowrap;
+	  		overflow : hidden;
+			text-overflow: ellipsis;
+			padding:0 $multiple;
+		}
+	}
+}

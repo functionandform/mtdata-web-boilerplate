@@ -1,0 +1,372 @@
+.cta {
+	height:36px;
+	display:block;
+	margin:12px 0;
+	border-radius:$border-radius;
+	padding:0 ($multiple / 2);
+	line-height:30px;
+	font-size:16px;
+	font-weight:400;
+	display:block;
+	width:100%;
+	text-align:center;
+	transition:50ms linear;
+	cursor:pointer;
+	margin:0 auto $multiple auto;
+	&:focus {
+		outline: none;
+	}
+	span {
+		display:block;
+		transform:translateY(-3px);
+		vertical-align: middle;
+		.icon {
+			margin-top:-3px;
+			display:inline-block;
+			vertical-align: middle;
+			margin-right:7px;
+		}
+	}
+	&.inactive {
+		cursor:not-allowed !important;
+		line-height:34px;
+		span {
+			transform:translateY(0px);
+		}
+	}
+	&:focus {
+		outline:none;
+	}
+	&:not(.inactive):active {
+		span {
+			transform:translateY(3px);
+		}
+	}
+	&.rightFloat {
+		width:auto;
+		min-width:120px;
+		float:right;
+	}
+	&.leftFloat {
+		width:auto;
+		min-width:120px;
+		float:left;
+	}
+	&.centerFloat {
+		width:auto;
+		min-width:120px;
+		margin:0 auto $multiple auto;
+	}
+}
+
+.cta.progress {
+	span {
+		display:block;
+		height:36px;
+		width:100%;
+		position:relative;
+		span {
+			position:absolute;
+			line-height:35px;
+			text-align:center;
+			display:block;
+			width:100%;
+			height:35px;
+			top:0; left:0;
+			opacity:1;
+			transform:scale(1);
+			transition:200ms $elastic;
+			color:#FFFFFF;
+			&.one {
+			}
+			&.two {
+				opacity:0;
+				transform:scale(0);
+				.icon {
+					margin:0;
+				}
+			}
+			&.three {
+				opacity:0;
+				transform:scale(0);
+				.icon {
+					margin:0;
+				}
+			}
+			&.four {
+				opacity:0;
+				transform:scale(0);
+				.icon {
+					margin:0;
+				}
+			}
+		}
+	}
+}
+
+.cta.progress.during span {
+	span {
+		&.one {
+			opacity:0;
+			transform:scale(0);
+		}
+		&.two {
+			opacity:1;
+			transform:scale(1);
+			transition:200ms $elastic 200ms;
+			.icon {
+				animation:spinner 600ms infinite;
+			}
+		}
+		&.three {
+			opacity:0;
+			transform:scale(0);
+			transition:200ms $elastic 200ms;
+		}
+		&.four {
+			opacity:0;
+			transform:scale(0);
+			transition:200ms $elastic 200ms;
+		}
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform:rotate(0deg);
+	}
+	90% {
+		transform:rotate(360deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+.cta.progress.complete span {
+	span {
+		&.one {
+			opacity:0;
+			transform:scale(0);
+		}
+		&.two {
+			opacity:0;
+			transform:scale(0);
+		}
+		&.three {
+			opacity:1;
+			transform:scale(1);
+			transition:200ms $elastic 200ms;
+		}
+		&.four {
+			opacity:0;
+			transform:scale(0);
+		}
+	}
+}
+
+.cta.progress.error span {
+	span {
+		&.one {
+			opacity:0;
+			transform:scale(0);
+		}
+		&.two {
+			opacity:0;
+			transform:scale(0);
+		}
+		&.three {
+			opacity:0;
+			transform:scale(0);
+		}
+		&.four {
+			opacity:1;
+			transform:scale(1);
+			transition:200ms $elastic 200ms;
+		}
+	}
+}
+
+
+.multipleChoice {
+	input[type="radio"] {
+		display:none;
+	}
+	display:flex;
+	label {
+		text-transform: none;
+		transition:50ms linear;
+		flex: 1 1 0%;
+		border-radius:0;
+		&:first-of-type {
+			border-top-left-radius:$border-radius;
+			border-bottom-left-radius:$border-radius;
+		}
+		&:last-of-type {
+			border-top-right-radius:$border-radius;
+			border-bottom-right-radius:$border-radius;
+		}
+		height:36px;
+		display:block;
+		margin:12px 0;
+		padding:0 ($multiple / 2);
+		line-height:30px;
+		font-size:16px;
+		font-weight:400;
+		text-align:center;
+		transition:50ms linear;
+		cursor:pointer;
+		span {
+			display:block;
+			transform:translateY(-3px);
+		}
+
+	}
+	input[type="radio"]:not(:checked) + label:active {
+		span {
+			transform:translateY(3px);
+		}
+	}
+}
+
+#floatingAction {
+	width:$multiple * 2;
+	height:$multiple * 2;
+	position:fixed;
+	bottom:$multiple * 3;
+	right:$multiple;
+	display:block;
+	z-index:20;
+	transition:200ms ease-in-out;
+	.action {
+		width:$multiple * 2;
+		height:$multiple * 2;
+		display:block;
+		text-align:center;
+		border-radius:50%;
+		transition:150ms ease-in-out;
+		cursor:pointer;
+		position:relative;
+		&:focus {
+		outline: none;
+		}
+		&:hover {
+			transform:scale(1.2);
+		}
+		&:active {
+			transition:50ms ease-in-out;
+			transform:scale(0.8);
+			outline: none;
+		}
+		.icon {
+			display:block;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+		}
+		&.primary {
+			z-index:5;
+		}
+	}
+	.extraOptions {
+		position:absolute;
+		top:0;
+		right:0;
+		height:100%;
+		width:100%;
+		a {
+			cursor:pointer;
+			transform:translateY(0);
+			position:absolute;
+			top:0;
+			right:0;
+			opacity:0;
+			transition-timing-function:ease-in-out;
+			transition-duration:200ms;
+			transition-delay:0ms;
+			&:focus {
+				outline: none;
+			}
+		}
+		&:before {
+			display:block;
+			content:"";
+			height:100%;
+			width:100%;
+			left:0;
+			top:0;
+			right:0;
+			position:fixed;
+			opacity:0;
+			visibility: hidden;
+			transition:opacity 200ms ease-in-out, visibility 0ms linear 200ms;
+		}
+	}
+	
+	@include breakpoint(desktop) { 
+		position:absolute;
+		bottom:-$multiple;
+		&.bottom {
+			top:calc(100% - 72px) !important;
+			bottom:auto !important;
+		}
+		&:not(.bottom).reveal {
+			.extraOptions {
+				a {
+					&:nth-of-type(1) {
+						transform:translateY(60px);
+					}
+					&:nth-of-type(2) {
+						transform:translateY(120px);
+					}
+					&:nth-of-type(3) {
+						transform:translateY(180px);
+					}
+					&:nth-of-type(4) {
+						transform:translateY(240px);
+					}
+
+				}
+			}
+		}
+	}
+}
+
+#floatingAction.reveal {
+	.action.primary {
+		transform:scale(0.8) rotate(45deg);
+	}
+	.extraOptions {
+		&:before {
+			transition:opacity 200ms ease-in-out, visibility 0ms linear 0ms;
+			opacity:1;
+			visibility: visible;
+		}
+		a {
+			transition-duration:400ms;
+			opacity:1;
+			&:nth-of-type(1) {
+				transform:translateY(-60px);
+				transition-delay:0ms;
+			}
+			&:nth-of-type(2) {
+				transform:translateY(-120px);
+				transition-delay:200ms;
+			}
+			&:nth-of-type(3) {
+				transform:translateY(-180px);
+				transition-delay:400ms;
+			}
+			&:nth-of-type(4) {
+				transform:translateY(-240px);
+				transition-delay:800ms;
+			}
+
+		}
+	}
+}
+
+
+
+

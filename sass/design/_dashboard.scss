@@ -1,0 +1,84 @@
+.lineBreak {
+	display:block;
+	height:1px;
+}
+
+.dashBoard {
+	margin:$multiple ($multiple / 2) 0 ($multiple / 2);
+}
+
+.dashBoard .col {
+	padding:0 ($multiple / 4) $multiple ($multiple / 4);
+	.container .col {
+		padding:0 ($multiple / 2) $multiple ($multiple / 2);
+	}
+	@include breakpoint(tablet) {
+		padding:0 ($multiple / 2) $multiple ($multiple / 2);
+	}
+}
+
+.dashBoard .col:focus {
+	outline:none;
+}
+
+
+.panel {
+	border-radius:$border-radius;
+	position:relative;
+	display:block;
+	width:100%;
+	padding:0 $multiple;
+	overflow:hidden;
+	.lineBreak {
+		display:block;
+		height:1px;
+
+		margin:0 (-$multiple) $multiple (-$multiple);
+		position:relative;
+	}
+	.titleBar {
+		border-top-left-radius:$border-radius;
+		border-top-right-radius:$border-radius;
+		height:$multiple * 2;
+		padding:0 ($multiple / 2);
+		margin:0 (-$multiple) $multiple (-$multiple);
+		position:relative;
+		display:block;
+		line-height:$multiple * 2;
+		.icon {
+			display:inline-block;
+			vertical-align: middle;
+			margin:0 ($multiple / 2) 0 0;
+		}
+		.title {
+			font-size:16px;
+			font-weight:600;
+			display:inline-block;
+			vertical-align: middle;
+		}
+	}
+	&.noPadding {
+		padding:0;
+		.titleBar {
+			margin:0;
+		}
+		.lineBreak {
+			margin:0 0 $multiple 0;
+		}
+	}
+}
+
+
+
+.listedContent {
+	list-style-type:none;
+	margin:(-$multiple) (-$multiple) 0 (-$multiple);
+	li {
+		padding:$multiple $multiple 0 $multiple;
+		display:block;
+		p:not(:last-of-type) {
+			margin:0;
+		}
+	}
+}
+

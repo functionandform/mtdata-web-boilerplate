@@ -1,0 +1,123 @@
+.nav {
+	list-style-type:none;
+	display:flex;
+	max-width:475px;
+	height:100%;
+	justify-content:space-between;
+	margin:0 auto;
+	padding:0 ($multiple / 2);
+	#logo {
+		display:none;
+	}
+	@include breakpoint(desktop) {
+		display:block;
+		width:100%;
+		padding:0;
+	}
+	#logo {
+		display:none;
+	}
+	li {
+		display:table;
+	}
+	li, #logo {
+		font-size:10px;
+		vertical-align: middle;
+		position:relative;
+		text-align: center;
+		flex: 1 1 0%;
+		img {
+			width:100%;
+			display:inline-block;
+			max-width:100px;
+			margin:0 auto;
+		}
+		span {
+			margin:0 auto 0 auto;
+			display:block;
+		}
+		.icon {
+			height:$multiple;
+			display:inline-block;
+			width:$multiple;
+			margin:($multiple / 4) 0 0 0;
+			content:"•";
+			transition:150ms ease-in-out;
+		}
+		@include breakpoint(desktop) {
+			display:block;
+			width:100%;
+			font-size:14px;
+			border-bottom-width:1px;
+			border-bottom-style:solid;
+			padding:($multiple / 2);
+			.icon {
+				height:32px;
+				width:32px;
+				margin:0 0 ($multiple / 4) 0;
+				vertical-align: middle;
+			}
+			span {
+				line-height:16px;
+				display:block;
+			}
+			&.active:before {
+				height:100%;
+				width:5px;
+				content:"";
+				display:block;
+				position:absolute;
+				left:0px;
+				top:0;
+			}
+			&:hover {
+				.icon {
+					transform:scale(1.2);
+				}
+			}
+			&:active {
+				.icon {
+					transition:50ms ease-in-out;
+					transform:scale(0.8);
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(desktop) {
+	#navBar.small #logo {
+		padding:7px 10%;
+	}
+	#navBar.small .nav li {
+		padding:0;
+		span {
+			display:none;
+		}
+		.icon {
+			margin:($multiple / 2) 0;
+		}
+		&:before {
+			width:3px;
+		}
+	}
+	#navBar.medium .nav li {
+		span {
+			display:block;
+		}
+	}
+	#navBar.large .nav li {
+		text-align:left;
+		.icon {
+			margin:0 ($multiple / 2) 0 0;
+			display:inline-block;
+		}
+		span {
+			display:inline-block;
+			font-size:16px;
+		}
+	}
+	#navBar.large #logo {
+		text-align: center;
+	}
+}

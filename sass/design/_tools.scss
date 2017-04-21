@@ -1,0 +1,246 @@
+/* DESIGN ---------------------------------------------------------------------------------------------------------*/
+
+.tools {
+	display:flex;
+	width:100%;
+	height:$multiple * 2;
+	justify-content: space-between;
+	align-items: center;
+	.toolGroup {
+		display: flex;
+		align-items:center;
+		height:$multiple * 2;
+	}
+	&.padding {
+		padding:0 $multiple;
+	}
+}
+
+.expandableTool {
+	position:relative;
+	cursor:pointer;
+	margin:0 $multiple 0 0;
+	&:last-of-type {
+		margin:0 0 0 0;
+	}
+	&:first-of-type {
+		//margin:0 ($multiple / 2) 0 0;
+	}
+	&.notify {
+		.tool:after {
+			position:absolute;
+			width:8px;
+			height:8px;
+			top:0px;
+			right:-2px;
+			content:"";
+			border-radius:50%;
+			border-width:2px;
+			border-style:solid;
+			display:block;
+		}
+	}
+	.tool {
+		transition:150ms ease-in-out;
+		&:hover {
+			transform:scale(1.2);
+		}
+		&:active {
+			transition:50ms ease-in-out;
+			transform:scale(0.8);
+		}
+	}
+	.toolSelect {
+		min-width: 100%;
+		max-width:(320px - 48px);
+		h4, p {
+			margin:($multiple / 2) 0 ($multiple / 2) 0;
+		}
+		ul {
+			list-style-type:none;
+		}
+		z-index:25;
+		opacity:0;
+		position:absolute;
+		top:0;
+		left:50%;
+		visibility:hidden;
+		border-radius:3px;
+		transform:translate(-50%,-12px);
+		transition:150ms ease-in-out;
+		li {
+			position:relative;
+			line-height: $multiple * 2;
+			padding:0 ($multiple / 2) 0 ($multiple / 2);
+			input {
+				min-width:(320px - 48px - 24px);
+			}
+		}
+		&.leftAlign {
+			left:0;
+			transform:translate(0,-12px);
+		}
+		&.rightAlign {
+			left:auto;
+			right:0;
+			transform:translate(0,-12px);
+		}
+	}
+}
+
+.expandableTool:focus {
+	outline:none;
+}
+
+
+.expandableTool.simple:focus .toolSelect {
+	opacity:1;
+	display:block;
+	visibility: visible;
+	transform:translate(-50%,0px);
+	&.leftAlign {
+		transform:translate(0,0px);
+	}
+	&.rightAlign {
+		transform:translate(0,0px);
+	}
+}
+
+
+.expandableTool:not(.simple) .toggle {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:block;
+	background:transparent;
+	content:"";
+	z-index:2;
+	&:focus {
+		outline:none;
+	}
+}
+
+.expandableTool.open {
+	.toggle {
+		position:fixed;
+		z-index:20;
+	}
+	outline:none;
+	.toolSelect {
+		opacity:1;
+		z-index:40;
+		display:block;
+		visibility: visible;
+		transform:translate(-50%,0px);
+		&.leftAlign {
+			transform:translate(0,0px);
+		}
+		&.rightAlign {
+			transform:translate(0,0px);
+		}
+	}
+}
+
+
+#themes {
+	.theme {
+		width:$multiple;
+		height:$multiple;
+		border-radius:50%;
+		position:relative;
+		display:block;
+		transition:100ms ease-in-out;
+		cursor:pointer;
+		.icon {
+			width:16px;
+			height:16px;
+			display:none;
+			margin:2px;
+			transition:150ms ease-in-out;
+		}
+		&:hover {
+			transform:scale(1.2);
+		}
+		&:active {
+			transition:50ms ease-in-out;
+			transform:scale(0.8);
+		}
+		&.active {
+			.icon {
+				display:block;
+			}
+		}
+
+	}
+	.toolSelect {
+		#themeChoices {
+			transform:rotate(0deg);
+			transition:150ms ease-in-out;
+			display:block;
+			&.switch {
+				transform:rotate(180deg);
+				transform-origin: center;
+				.icon {
+					transform:rotate(180deg);
+				}
+			}
+			.theme {
+				margin:($multiple / 2) 0 ($multiple / 2) 0;
+			}
+			a .icon {
+				transition:150ms ease-in-out;
+			}
+			a:hover .icon {
+				transform:scale(1.2);
+			}
+			a:active .icon {
+				transform:scale(0.8);
+			}
+		}
+	}
+}
+
+.expandableTool:not(#themes) .toolSelect {
+	min-width:320px - 48px;
+}
+
+.function {
+	font-size:14px;
+	line-height:24px;
+	display:inline-block;
+	vertical-align: middle;
+	white-space:nowrap;
+	.icon {
+		vertical-align: middle;
+		line-height:24px;
+		height:24px;
+		margin:0 ($multiple / 4) 0 0;
+	}
+	.icon.chev-down {
+		width:16px;
+	}
+	span {
+		vertical-align: middle;
+		font-weight:600;
+		margin:0 ($multiple / 4) 0 0;
+	}
+	span.placeholder {
+		font-weight:400;
+	}
+}
+
+
+
+#notifications ul li {
+	.icon {
+		position:absolute;
+		left:$multiple / 2;
+		top:0;
+	}
+	p {
+		padding-left:$multiple * 1.5;
+	}
+
+}

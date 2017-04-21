@@ -1,0 +1,20 @@
+.interactiveMap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.interactiveMap .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(200% - 48px);
+  transform: translateX(0);
+  display: table;
+}
+
+.interactiveMap .wrapper .plotList, .interactiveMap .wrapper .map {
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+}

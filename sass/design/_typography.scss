@@ -1,0 +1,156 @@
+
+/* GUIDES (Temporary) --------------------------------------------------------------------------------------------------*/
+body {
+    position:relative;
+}
+// body::after {
+//     display:block;
+//     width:100%;
+//     height:100%;
+//     position:fixed;
+//     content:"";
+//     top:0;
+//     left:0;
+//     z-index: 500;
+//     background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 23px, red 23px, red 24px);
+//     pointer-events: none;
+// }
+// body:hover:after {
+//     display:none;
+// }
+
+
+
+/* TYPOGRAPHY ---------------------------------------------------------------------------------------------------------*/
+
+*, body, input {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-style:normal;
+}
+
+p {
+	font-size:16px;
+	line-height:24px;
+	font-weight:400;
+	margin:0 0 $multiple 0;
+	&.footnote {
+		font-size:12px;
+		line-height:24px;
+	}
+	strong {
+		font-weight:bolder;
+	}
+	&.italic {
+		font-style:italic;
+	}
+}
+
+h4 {
+	font-size:14px;
+	line-height:24px;
+	font-weight:700;
+	text-transform:uppercase;
+}
+
+h3 {
+	font-size:21px;
+	line-height:24px;
+	font-weight:700;
+	margin:0 0 $multiple 0;
+}
+
+
+h2 {
+	font-size:28px;
+	line-height:(24px * 2);
+	font-weight:600;
+	margin:0 0 $multiple 0;
+	.icon {
+		margin-right:$multiple / 2;
+	}
+}
+
+
+h1 {
+	font-size:28px;
+	line-height:(24px * 2);
+	font-weight:800;
+	.icon {
+		margin-right:$multiple / 2;
+	}
+}
+
+.center {
+	text-align:center;
+}
+
+.stat {
+	display:table;
+	position:relative;
+	.data {
+		position:relative;
+		display:table-cell;
+		font-size:32px;
+		line-height:(24px * 2);
+		margin:0 0 24px 0;
+		font-weight:800;
+		&.large {
+			font-size:45px;
+		}
+		&.currency {
+			padding:0 0 0 10px;
+			&:before {
+				content:"£";
+				line-height:28px;
+				position:absolute;
+				left:0;
+				top:0;
+				font-size:14px;
+				font-weight:700;
+			}
+		}
+	}
+	label {
+		font-size:12px;
+		line-height:14px;
+		font-weight:400;
+		max-width:100px;
+		overflow-wrap: break-word;
+		display:table-cell;
+		vertical-align: middle;
+		height:48px;
+		padding-left:7px;
+	}
+}
+
+
+i {
+
+}
+
+.icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	vertical-align:middle;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}
+
+
+ul.links {
+	li {
+		line-height:48px;
+		font-size:16px;
+		line-height:24px;
+		font-weight:400;
+		color:inherit;
+		margin:0 0 $multiple 0;
+	}
+}
+
+.codeSnippet {
+	font-family:"Andale Mono", "Courier New", courier, monospace; 
+	font-size:12px;
+}

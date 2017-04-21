@@ -1,0 +1,73 @@
+/**
+ * Mixins
+ *
+ * Snippets of reusable CSS to develop faster and keep code readable
+ */
+
+// _mixins.scss
+
+// Breakpoint 
+@mixin breakpoint($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+ 
+  @else {
+    @warn "Unfortunately, no value could be retrieved from '#{$breakpoint}'. "
+        + "Please make sure it is defined in '$breakpoints' map.";
+  }
+}
+
+
+// Font size in rem with pixel fall back for IE8
+//@mixin font-size($size) {
+ //   font-size: $size + px;
+ //   font-size: ($size / 16) + rem; // 16 is browser font size i.e. html { font-size: 100% }
+//}
+
+// Color for links with 10% darker hover & focus color
+@mixin color($color) {
+    color: $color;
+    
+    &:focus,
+    &:hover {
+      color: darken($color, 10%);
+    }
+}
+
+// Create vendor-prefixed CSS in one go, e.g.
+// @include vendor(border-radius, 4px);
+// @include vendor(transition, background 1s);
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+// Clearfix mixin
+@mixin cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// center content
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin centerVert {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%,-50%);
+}

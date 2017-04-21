@@ -1,0 +1,109 @@
+
+<div class="fullPanel">
+	<div class="container">
+		<h2 class="center">Example of article lists</h2>
+		<div class="col">
+			<ul class="articles">
+				<a href="">
+					<li>
+						<h3>Article Title</h3>
+						<p>
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+						<p class="footnote">
+							published by or other meta info
+						</p><!-- footnote -->
+						<svg class="icon">
+			    		<use xlink:href="iconography/symbol-defs.svg#icon-chev-right"></use>
+			    	</svg>
+					</li>
+				</a>
+				<a href="">
+					<li>
+						<h3>Article Title</h3>
+						<p>
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+						<p class="footnote">
+							published by or other meta info
+						</p><!-- footnote -->
+						<svg class="icon">
+			    		<use xlink:href="iconography/symbol-defs.svg#icon-chev-right"></use>
+			    	</svg>
+					</li>
+				</a>
+			</ul><!-- articles -->
+		</div><!-- col eight -->
+	</div><!-- container -->
+	<div class="container">
+		<h2 class="center">Example of FAQ lists</h2>
+		<div class="col">
+			<ul class="accordian">
+				<li>
+					<div class="question">
+						<p class="italic">
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+					</div>
+					<div class="answer fold">
+						<p>
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+					</div><!-- hidden -->
+					<svg class="icon">
+		    		<use xlink:href="iconography/symbol-defs.svg#icon-chev-down"></use>
+		    		</svg>
+				</li>
+				<li>
+					<div class="question">
+						<p class="italic">
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+					</div>
+					<div class="answer fold">
+						<p>
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+					</div><!-- hidden -->
+					<svg class="icon">
+		    		<use xlink:href="iconography/symbol-defs.svg#icon-chev-down"></use>
+		    		</svg>
+				</li>
+				<li>
+					<div class="question">
+						<p class="italic">
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+					</div>
+					<div class="answer fold">
+						<p>
+							Main body copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor dui interdum elit sodales pretium. Donec sodales ultrices velit….
+						</p>
+					</div><!-- hidden -->
+					<svg class="icon">
+		    		<use xlink:href="iconography/symbol-defs.svg#icon-chev-down"></use>
+		    		</svg>
+				</li>
+			</ul><!-- articles -->
+		</div><!-- col eight -->
+	</div><!-- container -->
+</div><!-- fullPanel -->
+
+<script>
+
+// date/time picker
+	$('input[type="date"]').datepicker();
+	$('input[type="time"]').timepicker();
+
+
+	$(".expandableTool:not(.simple) .toggle").click(function() {
+    $(this).parent().toggleClass('open');
+  });
+
+	$("ul.accordian li").click(function(){
+		$(this).siblings().removeClass("open");
+		$(this).toggleClass("open");
+	});
+
+
+</script>

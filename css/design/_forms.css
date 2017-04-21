@@ -1,0 +1,12 @@
+form label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+form input {
+  min-height: 36px;
+  display: block;
+  margin: 6px 0;
+}
