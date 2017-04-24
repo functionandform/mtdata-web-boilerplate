@@ -38,6 +38,7 @@ input[type=text], input[type=search], input[type=password], input[type=time], in
 		height:36px;
 		top:0;
 		position:absolute;
+		pointer-events:none;
 	}
 }
 
