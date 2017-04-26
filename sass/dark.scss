@@ -15,6 +15,28 @@ $orange:#D66E12;
 $red:#D0021B;
 $purple:#9012FE;
 
+// Breakpoint 
+@mixin breakpoint($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+ 
+  @else {
+    @warn "Unfortunately, no value could be retrieved from '#{$breakpoint}'. "
+        + "Please make sure it is defined in '$breakpoints' map.";
+  }
+}
+
+
+$breakpoints: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1024px,
+  large: 1366px
+);
+
 
 .icon {
 	color:$c-primary;
@@ -39,6 +61,22 @@ body {
 .nav li, .nav #logo {
 	color:$grey;
 	border-bottom-color:$c-bg;
+}
+
+.nav li:not(.active) {
+	opacity:0.5;
+	.icon {
+		color:$grey;
+	}
+}
+
+@include breakpoint(desktop) {
+	.nav li:not(.active) {
+		opacity:1;
+		.icon {
+			color:$c-primary;
+		}
+	}
 }
 
 .nav li:before {
