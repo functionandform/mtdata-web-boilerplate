@@ -755,6 +755,28 @@ ul.accordian li {
 	}
 }
 
+.hint:after, [data-hint]:after {
+    background: $c-main-text;
+    color:#FFFFFF;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+.hint--top:before {
+  border-top-color: $c-main-text; }
+
+.hint--bottom:before {
+  border-bottom-color: $c-main-text; }
+
+.hint--left:before {
+  border-left-color: $c-main-text; }
+
+.hint--right:before {
+  border-right-color: $c-main-text; }
+
+
+
 
 
 // color overides
