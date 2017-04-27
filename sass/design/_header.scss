@@ -6,22 +6,33 @@ header {
 		width:100%;
 		display:block;
 		padding:0 $multiple;
+		.toolGroup:nth-of-type(1) {
+			min-width:0;
+		}
 		#breadCrumb {
 			list-style-type: none;
 			line-height:24px;
 			font-size:14px;
 			display: inline-block;
  			vertical-align: middle;
+ 			min-width:0;
+ 			overflow:hidden;
+ 			white-space: nowrap;
+  			overflow: hidden;
 			li {
+				min-width:0;
 				line-height: 24px;
 				display:inline-block;
 				margin-right:$multiple / 4;
 				font-weight:400;
  				vertical-align: middle;
+ 				white-space: nowrap;
 				span {
 					display:inline-block;
 					vertical-align: middle;
 					height:24px;
+					min-width: 0;
+ 					white-space: nowrap;
 				}
 				.icon.chev-right {
 					vertical-align: middle;
