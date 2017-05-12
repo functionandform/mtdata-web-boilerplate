@@ -29,7 +29,12 @@ var pageload = function() {
 
 	
 	$(".content").empty().load("pages/"+currentPage+".html");
+	
+	$('a[href="#' + currentPage + '"]').parent().addClass("active");
 
+};
+
+var findAchors = function() {
 	$(".content h3").each(function() {
 		var sectionReg = $(this).text();
 		var section = $(this).text().replace(/ /g , "-").toLowerCase();
@@ -37,7 +42,4 @@ var pageload = function() {
 		
 		$('a[href="#' + currentPage + '"] + ul').append("<li><a href='#"+section+"'>"+sectionReg+"</a></li>");
 	});
-	
-	$('a[href="#' + currentPage + '"]').parent().addClass("active");
-
 };
