@@ -27,10 +27,8 @@ var pageload = function() {
 	var currentPage = window.location.hash.substring(1);
 	$("ul.nav li.active").removeClass("active");
 
-	var newLink = $("/pages/"+currentPage+".html");
-	console.log(newLink);
 	
-	$(".content").empty().load(newLink);
+	$(".content").empty().load("pages/"+currentPage+".html");
 
 	$(".content h3").each(function() {
 		var sectionReg = $(this).text();
