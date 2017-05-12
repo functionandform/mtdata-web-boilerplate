@@ -27,7 +27,7 @@ ________________________________________________________________________________
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 		<!-- END META TAGS -->
 
-		<title>Guide: How to use the MTData web boilerplate</title>
+		<title>Guide: Using the MTData boilerplate</title>
 
 		<!-- FONT LINKS-->
 		<link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Condensed:500|Fira+Sans:400,400i,700" rel="stylesheet">
@@ -48,76 +48,34 @@ ________________________________________________________________________________
 			<ul class="nav">
 				<li>
 					<a href="#introduction"></a>
+					<ul></ul>
 				</li>
 				<li>
 					<a href="#navigational-structure"></a>
+					<ul></ul>
 				</li>
 				<li>
 					<a href="#dashboards"></a>
+					<ul></ul>
 				</li>
 				<li>
 					<a href="#internal-pages"></a>
+					<ul></ul>
 				</li>
 				<li>
 					<a href="#tools-and-filtering"></a>
+					<ul></ul>
 				</li>
 			</ul>
 		</div><!-- sidenav -->
 		<div class="content">
 
-			<h2>Introduction</h2>
-			<h3>Why use the boilerplate?</h3>
-			<p>
-				The MTData web boilerplate was created to ensure all future web products meet the highest of design and interaction standards. The boilerplate caters to every possible use, is built mobile first and is simple and intuitive to navigate. It is crucial that this boilerplate is used, right down to every detail.
-			</p>
-			<h3>
-				Dev environment
-			</h3>
-			<p>
-				We use <span class="code">.scss</span> files which is than compiled into one <span class="code">style.css</span> file using <a href="https://prepros.io/">PrePross</a>. This allows us to utilise the many features of sass such as variables and nesting. It is important that you understand how sass works, and how we have structured the <span class="code">.scss</span> files. 
-			</p>
-			<p class="important">
-				Do not altar the style.css files. These are over-written every time prepross compiles the .scss files. 
-			</p>
-			<p>
-				<a href="https://prepros.io/">PrePross</a> is also used to compile our javascript files. <span class="code">scripts.js</span> includes all the prepross compiling functions which generates the <span class="code">compiled.js</span> file from both <span class="code">/dependancies</span>and <span class="code">/custom</span> folders.
-			</p>
-
-			<div class="browsers">
-				<div class="browser-ui">
-					<img src="screens/dashboard-light-desktop.jpg" alt="">
-				</div><!-- browser-ui -->
-				<div class="browser-ui mobile">
-					<img src="screens/dashboard-light-mobile.jpg" alt="">
-				</div><!-- browser-ui -->
-				<p class="small">Responsive boilerplate</p>
-			</div><!-- browsers -->
-
-			<h3>Mobile first</h3>
-			<p>
-				This boilerplate has been designed to put the needs of the mobile user first. Simplified navigation, horizontally swiping modules rather than stacked content, and large tappable buttons.
-			</p>
-			<p class="important">
-				When developing new products with this boilerplate, make sure that you preview it mobile size, not desktop.
-			</p>
-
-
-			<h3>Multiple themes</h3>
-			<p>
-				Depending on how dimly lit the users environment is, we have implemented two themes. One dark, and one light. These are saved in the users cookies so that it remembers their preference, and is toggled using the coloured circle in the top right corner.
-			</p>
-			<p class="important">
-				When developing new products with this boilerplate, make sure that you preview it mobile size, not desktop.
-			</p>
-
-
-			
 		</div><!-- content -->
 	</body>
 	<!-- JAVASCRIPT -->
 	<!-- JAVASCRIPT -->
 		<script src="js/jquery.min.js"></script>
-		<script src="js/hashchange.js"></script>
+		<script src="js/jquery.hashchange.js"></script>
 		<script src="js/main.js"></script>
 	<!-- JAVASCRIPT -->
 

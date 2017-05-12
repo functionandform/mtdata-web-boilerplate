@@ -9,9 +9,8 @@ $( document ).ready(function() {
 	});
 
 
-    $(".nav li a").click(function(){
-    	var link
-    })
+
+   
 
     pageload();
 
@@ -26,11 +25,21 @@ $( document ).ready(function() {
 var pageload = function() {
 	
 	var currentPage = window.location.hash.substring(1);
-	console.log(currentPage);
+	$("ul.nav li.active").removeClass("active");
 
-	var newLink = $("pages/"+currentPage+".html");
+	var newLink = $("/pages/"+currentPage+".html");
 	console.log(newLink);
 	
 	$(".content").empty().load(newLink);
-	$('a[href="#' + currentPage + '"]').addClass("active");
+
+	$(".content h3").each(function() {
+		var sectionReg = $(this).text();
+		var section = $(this).text().replace(/ /g , "-").toLowerCase();
+		console.log(section);
+		
+		$('a[href="#' + currentPage + '"] + ul').append("<li><a href='#"+section+"'>"+sectionReg+"</a></li>");
+	});
+	
+	$('a[href="#' + currentPage + '"]').parent().addClass("active");
+
 };
