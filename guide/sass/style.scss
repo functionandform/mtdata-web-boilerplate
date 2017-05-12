@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/**
+ * Style file
+ *
+ * This file is compiled into style.css
+ */
+
+ /* ---------- fonts -------------------*/
+
+/* ---------- Import css reset ---------- */
+
+@import 'base/reset';
+
+
+/* ---------- Import variables ---------- */
+
+@import 'base/variables';
+
+
+/* ---------- Import base ---------- */
+
+@import 'base/mixins';
+
+/* ---------- Import design ---------- */
+@import 'design/typography';
+@import 'design/header';
+@import 'design/global';
+@import 'design/design';
+@import 'design/layout';
