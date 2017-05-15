@@ -110,4 +110,13 @@ a.linkTo  {
 	line-height:$multiple * 2;
 }
 
-
+ul {
+	font-size:18px;
+	line-height:$multiple;
+	color:$grey;
+	font-weight:400;
+	margin:0 0 $multiple $multiple;
+	li {
+		margin:0 0 $multiple 0;
+	}
+}
