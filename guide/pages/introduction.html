@@ -45,12 +45,3 @@
 </p>
 
 
-<script>
-$(".content h3").each(function() {
-	var sectionReg = $(this).text();
-	var section = $(this).text().replace(/ /g , "-").toLowerCase();
-	console.log(section);
-		
-	$('a[href="#' + currentPage + '"] + ul').append("<li><a href='#"+section+"'>"+sectionReg+"</a></li>");
-});
-</script>
