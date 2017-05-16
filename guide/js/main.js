@@ -14,11 +14,11 @@ $( document ).ready(function() {
 
     pageload();
 
-    $(".nav a").click(function() {
-    	pageload();
-    })
 }); // doc ready
 
+$(window).on('hashchange', function() {
+	pageload();
+});
 
 
 // tab switch ajax
