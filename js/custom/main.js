@@ -338,6 +338,9 @@ $("#messages").click(function () {
 
 $(document).ready(function () {
 
+	readCookieCSS();/*reading cookie on page load*/
+
+
 	var bar = new ProgressBar.Circle(progressContainer, {
 		color: '#DFE3EE',
 		// This has to be the same size as the maximum width to
@@ -378,9 +381,6 @@ $(document).ready(function () {
 			$("#wrapper").addClass('loadReveal');
 		}, 200);
 	}, 1400);
-
-
-  readCookieCSS();/*reading cookie on page load*/
 
 
 	tabLoad();
