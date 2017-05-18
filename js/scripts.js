@@ -1,6 +1,7 @@
 //@prepros-append dependancies/jquery.min.js
 //@prepros-append dependancies/jquery.hashchange.js
 //@prepros-append dependancies/js.cookie.js
+//@prepros-append dependancies/progressbar.js
 //@prepros-append dependancies/slick.min.js
 //@prepros-append dependancies/chartist.min.js
 //@prepros-append dependancies/chartist-plugin-legend.js
